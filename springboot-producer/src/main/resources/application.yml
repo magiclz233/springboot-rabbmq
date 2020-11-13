@@ -1,0 +1,27 @@
+spring:
+  rabbitmq:
+    addresses: 106.75.216.194:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+  datasource:
+    url: jdbc:mysql://106.75.216.194:3306/rabbitmq?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: QWERwasd*963.
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8001
+  servlet:
+    context-path: /
+mybatis:
+  type-aliases-package: com.sxw.springbootproducer
+  mapper-locations: classpath*:/mappers/*.xml
+logging:
+  level:
+    tk:
+      mybatis: trace
